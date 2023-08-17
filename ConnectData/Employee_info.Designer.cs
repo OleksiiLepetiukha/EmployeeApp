@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnConnect = new System.Windows.Forms.Button();
             this.grdManagementData = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +44,9 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.employeeId = new System.Windows.Forms.Label();
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.ttButtons = new System.Windows.Forms.ToolTip(this.components);
+            this.ttBoxes = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdManagementData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +62,7 @@
             this.btnConnect.Size = new System.Drawing.Size(103, 23);
             this.btnConnect.TabIndex = 3;
             this.btnConnect.Text = "&Add Employee";
+            this.ttButtons.SetToolTip(this.btnConnect, "Click to add new employee");
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
@@ -91,6 +96,7 @@
             this.employeeNameField.Name = "employeeNameField";
             this.employeeNameField.Size = new System.Drawing.Size(158, 20);
             this.employeeNameField.TabIndex = 1;
+            this.ttBoxes.SetToolTip(this.employeeNameField, "Type employee name and surname");
             // 
             // label2
             // 
@@ -114,6 +120,7 @@
             this.genderSelect.Name = "genderSelect";
             this.genderSelect.Size = new System.Drawing.Size(158, 21);
             this.genderSelect.TabIndex = 2;
+            this.ttBoxes.SetToolTip(this.genderSelect, "Select gender");
             this.genderSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
@@ -153,6 +160,7 @@
             this.btnDelete.Size = new System.Drawing.Size(103, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "&Delete Employee";
+            this.ttButtons.SetToolTip(this.btnDelete, "Click to delete selected employee");
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -167,6 +175,7 @@
             this.btnEdit.Size = new System.Drawing.Size(103, 23);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "&Edit";
+            this.ttButtons.SetToolTip(this.btnEdit, "Click to edit selected employee");
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -181,6 +190,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(103, 23);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "&Update";
+            this.ttButtons.SetToolTip(this.btnUpdate, "Click to update your edition");
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -195,6 +205,7 @@
             this.btnSearch.Size = new System.Drawing.Size(103, 23);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "&Search";
+            this.ttButtons.SetToolTip(this.btnSearch, "Click to open the search form");
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -213,7 +224,26 @@
             this.txtEmployeeId.Name = "txtEmployeeId";
             this.txtEmployeeId.Size = new System.Drawing.Size(158, 20);
             this.txtEmployeeId.TabIndex = 0;
+            this.ttBoxes.SetToolTip(this.txtEmployeeId, "Selected Id (Read only)");
             this.txtEmployeeId.TextChanged += new System.EventHandler(this.txtEmployeeId_TextChanged);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(12, 415);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(103, 23);
+            this.btnExit.TabIndex = 100;
+            this.btnExit.Text = "&Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // ttBoxes
+            // 
+            this.ttBoxes.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Employee_info
             // 
@@ -221,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtEmployeeId);
             this.Controls.Add(this.employeeId);
             this.Controls.Add(this.btnSearch);
@@ -263,6 +294,9 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label employeeId;
         private System.Windows.Forms.TextBox txtEmployeeId;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ToolTip ttButtons;
+        private System.Windows.Forms.ToolTip ttBoxes;
     }
 }
 

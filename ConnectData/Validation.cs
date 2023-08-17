@@ -18,8 +18,8 @@ namespace ValidateControls
                     {
                         MessageBox.Show($"{controlName} should not be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox.Focus();
-                    textBox.BackColor = Color.Red;
-                    return false;
+                        textBox.BackColor = Color.Red;
+                        return false;
                     } else
                 {
                     textBox.BackColor = Color.White;

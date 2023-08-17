@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ddlField = new System.Windows.Forms.ComboBox();
             this.ddlOperator = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.lblFeedback = new System.Windows.Forms.Label();
+            this.ttButtons = new System.Windows.Forms.ToolTip(this.components);
+            this.ttBoxes = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +56,7 @@
             this.ddlField.Name = "ddlField";
             this.ddlField.Size = new System.Drawing.Size(121, 21);
             this.ddlField.TabIndex = 0;
+            this.ttBoxes.SetToolTip(this.ddlField, "Select a search field");
             // 
             // ddlOperator
             // 
@@ -68,6 +72,7 @@
             this.ddlOperator.Name = "ddlOperator";
             this.ddlOperator.Size = new System.Drawing.Size(121, 21);
             this.ddlOperator.TabIndex = 1;
+            this.ttBoxes.SetToolTip(this.ddlOperator, "Select an operator");
             // 
             // txtSearch
             // 
@@ -75,6 +80,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(152, 20);
             this.txtSearch.TabIndex = 2;
+            this.ttBoxes.SetToolTip(this.txtSearch, "Type a search criteria");
             // 
             // label1
             // 
@@ -115,6 +121,7 @@
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 3;
             this.btnRun.Text = "&Run";
+            this.ttButtons.SetToolTip(this.btnRun, "Click to run query");
             this.btnRun.UseVisualStyleBackColor = false;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
@@ -131,6 +138,7 @@
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "&Close";
+            this.ttButtons.SetToolTip(this.btnClose, "Click to close the form");
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -155,6 +163,10 @@
             this.lblFeedback.Size = new System.Drawing.Size(56, 13);
             this.lblFeedback.TabIndex = 9;
             this.lblFeedback.Text = "FeedBack";
+            // 
+            // ttBoxes
+            // 
+            this.ttBoxes.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // SearchEmployees
             // 
@@ -194,5 +206,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.ToolTip ttButtons;
+        private System.Windows.Forms.ToolTip ttBoxes;
     }
 }
